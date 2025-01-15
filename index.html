@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        background-color: gainsboro;
+        font-family: verdana;
+      }
+
+      .contenitore-todolist {
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      h1 {
+        padding: 1rem;
+      }
+
+      #animazione {
+        animation: ciao linear 10s infinite alternate;
+      }
+
+      @keyframes ciao {
+        0% {
+          transform: translateX(-50%);
+        }
+        100% {
+          transform: translateX(50%);
+        }
+      }
+
+      input {
+        border-radius: 1rem;
+        height: 35px;
+        padding: 0rem 0.5rem 0rem 0.5rem;
+        border: 1px solid ghostwhite;
+      }
+
+      button {
+        height: 25px;
+        width: 25px;
+        border-radius: 2rem;
+        background-color: rgb(255, 255, 255);
+        border: none;
+      }
+
+      .bottone-aggiungi {
+        background-color: white;
+        width: 100px;
+        height: 35px;
+      }
+
+      li {
+        list-style-type: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        font-size: 0.9rem;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="contenitore-todolist">
+      <h1 id="animazione">To-do List</h1>
+      <div>
+        <input type="text" placeholder="scrivi qui..." id="taskInput" />
+        <button onclick="addProduct()" class="bottone-aggiungi">
+          Aggiungi
+        </button>
+      </div>
+      <ul id="taskList"></ul>
+    </div>
+    <script src="./index.js"></script>
+  </body>
+</html>
