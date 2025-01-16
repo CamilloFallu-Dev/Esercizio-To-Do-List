@@ -4,7 +4,7 @@ const addProduct = () => {
   // Crea un nuovo elemento lista (li)
   const taskItem = document.createElement("li");
 
-  // Crea un checkbox
+  // Crea una checkbox
   const checkbox = document.createElement("input");
   checkbox.type = "checkbox";
 
@@ -16,12 +16,12 @@ const addProduct = () => {
     taskItem.remove(); // Rimuove l'elemento li quando cliccato
   };
 
-  // Aggiungi il checkbox, il testo del task e il bottone "X" all'elemento li
+  // Aggiunge il checkbox, il testo del task e il bottone "X" all'elemento li
   taskItem.appendChild(checkbox);
   taskItem.appendChild(document.createTextNode(` ${taskText} `));
   taskItem.appendChild(removeButton);
 
-  // Aggiungi il task alla lista (ul)
+  // Aggiunge il task alla lista (ul)
   const taskList = document.getElementById("taskList");
   taskList.appendChild(taskItem);
 
