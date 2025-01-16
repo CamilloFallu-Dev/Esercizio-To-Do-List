@@ -18,7 +18,10 @@ const addProduct = () => {
 
   // Aggiunge il checkbox, il testo del task e il bottone "X" all'elemento li
   taskItem.appendChild(checkbox);
+
+  //crea un nodo che contiene del testo
   taskItem.appendChild(document.createTextNode(` ${taskText} `));
+  //aggiunge il rimuovi bottone
   taskItem.appendChild(removeButton);
 
   // Aggiunge il task alla lista (ul)
